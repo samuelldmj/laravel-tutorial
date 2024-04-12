@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\DB;
 
 
 Route::get('/', function () {
-    // return view('welcome');
+    return view('welcome');
    
 
     //selecting users
@@ -41,6 +41,7 @@ Route::get('/', function () {
     //=======using eloquent
     //search for a data
     // $users = User::where('id', 2)->first();
+    // $users = User::find(8);
 
     //adding a data
     // $users = User::create([
@@ -62,8 +63,8 @@ Route::get('/', function () {
   
 
     //getting all data
-    $users = User::get();
-    dd($users);
+    // $users = User::get();
+    // dd($users);
 
 
 });
