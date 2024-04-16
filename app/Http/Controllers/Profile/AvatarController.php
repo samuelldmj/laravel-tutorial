@@ -16,10 +16,13 @@ class AvatarController extends Controller
     // $request->validate([
     //     'avatar' => 'required|image'
     // ]);
-    // dd($request->all());
+    dd($request->all());
 
         //back to the profile page after making a change.
     // return response()->redirectTo(route('profile.edit'));
-    return back()->with('message', 'Avatar is changed');
+    // return back()->with('message', 'Avatar is changed');
+
+    //after the image has been stored.
+    return redirect(route('profile.edit'))->with('message', 'Avatar is updated');
   }
 }
